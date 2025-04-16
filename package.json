@@ -1,0 +1,16 @@
+{
+  "name": "jeff-develop",
+  "version": "0.0.1",
+  "description": "Just another frontend framework",
+  "main": "",
+  "scripts": {
+    "serve:examples": "npx http-server . -o ./examples/ -bg",
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "workspaces": [
+    "packages/runtime"
+  ]
+}
