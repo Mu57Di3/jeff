@@ -4,7 +4,7 @@
   "description": "Just another frontend framework",
   "main": "",
   "scripts": {
-    "serve:examples": "npx http-server . -o ./examples/ -bg",
+    "serve:examples": "npx http-server . -o ./examples/ -bg"
   },
   "keywords": [],
   "author": "",
