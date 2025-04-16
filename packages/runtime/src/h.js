@@ -10,7 +10,7 @@ export const DOM_TYPES = {
     FRAGMENT: "fragment",
 }
 
-export function h(tag, props = {}, children = {}) {
+export function h(tag, props = {}, children = []) {
     return {
         tag,
         props,
@@ -19,20 +19,20 @@ export function h(tag, props = {}, children = {}) {
     }
 }
 
-function mapTextNodes(children) {
+export function mapTextNodes(children) {
     return children.map((child) => {
         return typeof child === 'string' ? hString(child) : child;
     })
 }
 
-function hString(str) {
+export function hString(str) {
     return {
         type: DOM_TYPES.TEXT,
         value: str,
     }
 }
 
-function hFragment(vNodes) {
+export function hFragment(vNodes) {
     return {
         type: DOM_TYPES.FRAGMENT,
         children: vNodes,
